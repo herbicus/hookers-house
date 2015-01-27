@@ -1,0 +1,83 @@
+// -------------------------------------
+//   HEADER SECTION - NAV/MOBILE NAV
+// -------------------------------------
+// ----- Top Header and Nav
+// -------------------------------------
+
+header {
+	height: 170px;
+	background: url("../img/header-bg.png");
+	@include bg-cover;
+	//background: rgba(247, 246, 247, 0.65); 
+	border-top: 1px dashed #000;
+	margin-top: 10px;
+	box-shadow: 0 2px 2px $charcoal;
+	
+	
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	.top-header-nav {
+		background: url("../img/header-divider.png");
+		@include bg-contain;
+		background-position: bottom center; 
+		height: 50px;
+		width: 100%;
+		position: relative;
+		top: 115px;
+		
+		ul {
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+			@include centerer;
+			top: -25px;
+			top: 20px;
+			
+			li {
+				font-family: 'moonshinersharp';
+				font-weight: bold; 
+				font-size: 24px;
+				letter-spacing: 1px;
+				display: inline-block;
+				padding: 20px 20px;
+				margin-right: 10px;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					color: #000;
+					text-decoration: none;
+					@include underline-hover;
+					padding: 19px 20px;
+				} 
+			}
+			
+			// SITE LOGO
+			.l-header-logo { // <h1>
+				background: url("../img/logo.png");
+				@include bg-cover;
+				text-indent: -9999px; 
+				position: relative;
+				// font-size: 6em;
+				// top: -30px;
+				font-size: 3em;
+				height: 138px;
+				top: -65px;
+				//@include pop-hover;
+				
+			}
+		}
+	}
+
+	// .l-logo {
+	// 	.l-header-logo { // <h1>
+	// 		@include shadow-border(red);
+	// 		background: url("../img/logo.png");
+	// 		@include bg-cover;
+	// 		text-indent: -9999px; 
+	// 	}
+	// }
+}

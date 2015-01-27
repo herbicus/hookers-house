@@ -1,0 +1,72 @@
+// -------------------------------------
+//   HEADER SECTION - NAV/MOBILE NAV
+// -------------------------------------
+// ----- Top Header and Nav
+// -------------------------------------
+
+.l-section-two {
+	padding-top: 2em;
+	background: #fcfcfc;
+	//background: url(../img/pr-glass.jpg);
+	//@include bg-cover;
+	
+	.whole-width h1 {
+		padding: 1em 0;
+		font-family: 'moonshinersharp';
+	}
+	
+	.l-sidebar-container {
+		@include span-columns(4);
+		background: url("../img/barrel.png");
+		@include bg-contain;
+		float: left;
+		height: 200px;
+	}
+
+	.l-main-container {
+		@include span-columns(8);
+		float: left;
+		padding: 1em 5%;
+	}
+
+	.l-glass-section {
+		padding: 5em 0;
+		text-align: center;
+		h3 {
+			padding: 0.74em 0;
+		}
+		img {
+			width: 150px;
+			height: 150px;
+			text-align: center;
+			height: 0 auto;
+		}
+		p {
+			padding: 0 25%;
+		}
+	}
+
+	.l-map-section {
+		background: url("../img/mapx.png")fixed;
+		@include bg-cover;
+		background-position: top right; 
+		// padding: 7em 0;
+		
+		.l-map-container {
+			background: rgba(247, 246, 247, 0.45);
+			padding: 7em 0;
+			min-height: 50vh;
+		}
+
+		.l-map-text {
+			padding-left: 10%;
+			line-height: 28px;
+		} 
+
+		.l-map-image {
+			background: url("../img/barrel.png");
+			@include bg-contain; 
+			min-height: 50vh;
+		}
+	}
+}

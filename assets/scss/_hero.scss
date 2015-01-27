@@ -1,0 +1,78 @@
+// -------------------------------------
+//   HERO SECTION - ABOVE THE FOLD
+// -------------------------------------
+// ----- Hero Section - Above the Fold
+// -------------------------------------
+
+.l-section-hero {
+	@include bg-cover;
+	//padding-top: 5em;
+	position: relative;
+	overflow: hidden;
+	// background: rgba(247, 246, 247, 0.65);
+	// background: black; 
+	height: 100vh;
+	
+	.l-row {
+		background: rgba(247, 246, 247, 0.45);
+		padding-top: 5em;
+	}
+}
+
+#aboveFold {
+	@include bg-cover;
+	background-attachment: fixed !important; 
+	-webkit-background-size: cover !important; 
+	-o-background-size: cover !important; 
+	background-size: cover !important; 
+}
+
+#l-hero-image {
+	//@include shadow-border($deepRed);
+	position: relative;
+	padding-top: 15%;
+	
+	// font-family: 'moonshinerround';
+	// font-family: 'moonshinersharp_oblique';
+	// font-family: 'moonshinersharp';
+	// font-family: 'moonshinerround_oblique';
+	h1 {
+		font-family: 'moonshinersharp';
+		font-weight: bold;
+	}
+	
+
+}
+
+#l-hero-header {
+	font-size: 7em;
+	@include centerer;
+	top: 15%;
+	left: 30%;
+}
+
+// #heroLeft {
+// 	position: relative;
+// 	overflow: hidden;
+// }
+
+#heroRight {
+	padding-left: 7%;
+	
+	p {
+		line-height: 28px;
+		text-shadow: 0 2px 2px $cream;
+		font-weight: bold;
+	}
+}
+
+// li {
+// 	display: inline-block;
+// 	padding-top: 20px;
+// 	margin-right: 10px;
+// 	a {
+// 		color: #000;
+// 		text-decoration: none;
+// 		@include underline-hover;
+// 	}
+// }

@@ -1,0 +1,177 @@
+// -------------------------------------
+//   Layout
+// -------------------------------------
+// ----- Global layout classes (margin, padding, floats, etc).
+// -------------------------------------
+
+*,
+*:before,
+*:after  {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box; 
+}
+
+// SIMPLIFIED GRID
+
+.row { float: left; width: 100%; @include row(); }
+
+.whole { @include span-columns(12); }
+
+.half { @include span-columns(6); }
+
+.third { @include span-columns(4); }
+
+.fourth { @include span-columns(3); }
+
+.sixth { @include span-columns(2); }
+
+.one { @include span-columns(1); }
+
+.content-wrap {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0 1%;
+	@include row();
+	@include outer-container;
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 768px;
+	}
+	@include mq(laptop) {
+		max-width: 1024px;
+	}
+	@include mq(desktop) {
+		max-width: 1280px;
+	}
+}
+
+
+// ALTERNATE RESPONSIVE GRID
+.l-row { 
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	*zoom: 1;
+	padding: 0 1%;
+	@include row();
+	@include outer-container;
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 768px;
+	}
+	@include mq(laptop) {
+		max-width: 1024px;
+	}
+	@include mq(desktop) {
+		max-width: 1280px;
+	}
+}
+
+.full-width {
+	@include span-columns(12);
+	@include media(min-width 320px max-width 768px, 6) {
+    	@include span-columns(6);
+ 	}
+ }
+
+.two-col { 
+	@include span-columns(6);
+	@include media(min-width 320px max-width 768px, 6) {
+    	@include span-columns(6);
+	}
+}
+
+.three-col { 
+	@include span-columns(4);
+	@include media(min-width 320px max-width 768px, 6) {
+    	@include span-columns(6);
+	}
+}
+
+.four-col { 
+	@include span-columns(3);
+	@include media(min-width 320px max-width 480px, 6) {
+    	@include span-columns(6);
+  }
+}
+
+.six-col { 
+	@include span-columns(2);
+	@include media(min-width 320px max-width 480px, 6) {
+    	@include span-columns(6);
+	}
+}
+
+.twelve-col { 
+	@include span-columns(1);
+	@include media(min-width 320px max-width 480px, 6) {
+	}
+}
+
+// GLOBAL STYLES
+
+body, html {
+	width: 100%;
+	height: 100%;
+	background: $cream;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+body {
+	position: relative;
+	
+}
+
+section {
+	height: 100vh;
+}
+
+// iPad with portrait orientation.
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  body {
+    height: 1024px;
+  }
+}
+ 
+
+//iPad with landscape orientation.
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  body {
+    height: 768px;
+  }
+}
+
+//body {
+//  background: $cream;
+//  color: #222222;
+//  padding: 0;
+//  margin: 0;
+//  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+//  font-weight: normal;
+//  font-style: normal;
+//  line-height: 1;
+//  position: relative;
+//  cursor: default; 
+//}
+

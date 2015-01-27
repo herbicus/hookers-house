@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'neutratext_bold';
+    src: url('../fonts/nuetratext/neutratext-bold.eot');
+    src: url('../fonts/nuetratext/neutratext-bold.ttf') format('embedded-opentype'),
+         url('../fonts/nuetratext/neutratext-bold.woff') format('woff'),
+         url('../fonts/nuetratext/neutratext-bold.ttf') format('truetype'),
+         url('../fonts/nuetratext/neutratext-bold.svg#nuetratext/neutratext-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neutratext_book';
+    src: url('../fonts/nuetratext/neutratext-book.eot');
+    src: url('../fonts/nuetratext/neutratext-book.ttf') format('embedded-opentype'),
+         url('../fonts/nuetratext/neutratext-book.woff') format('woff'),
+         url('../fonts/nuetratext/neutratext-book.ttf') format('truetype'),
+         url('../fonts/nuetratext/neutratext-book.svg#nuetratext/neutratext-book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neutratext_demi';
+    src: url('../fonts/nuetratext/neutratext-demi.eot');
+    src: url('../fonts/nuetratext/neutratext-demi.ttf') format('embedded-opentype'),
+         url('../fonts/nuetratext/neutratext-demi.woff') format('woff'),
+         url('../fonts/nuetratext/neutratext-demi.ttf') format('truetype'),
+         url('../fonts/nuetratext/neutratext-demi.svg#nuetratext/neutratext-demi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

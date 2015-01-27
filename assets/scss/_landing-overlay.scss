@@ -1,0 +1,69 @@
+// -------------------------------------
+//   Splash/Landing Overlay
+// -------------------------------------
+// ----- stylings for intro landing/splash overlay
+// -------------------------------------
+
+
+.l-splash-overlay {
+	@include coverer;
+	z-index: 1; 
+	background: rgba(0, 0, 0, 0.85);
+	//background: url(../img/wood-bg.jpg);
+	@include bg-cover;
+	
+	.l-submit-container {
+		width: 700px;
+		height: 700px;
+		// @include shadow-border(red);
+		background: url("../img/frame-plus.jpg");
+		@include bg-contain;
+		@include centerer;
+	}
+	
+	h1 {
+		text-align: center;
+		color: $charcoal;
+		padding-top: 6em;
+		position: relative;
+		top: -3em;
+		
+	}
+
+	.l-choice-container {
+		// @include shadow-border(green);
+		position: relative;
+		left: 11em;
+		top: 3em;
+	}
+
+	.splash-btn-yes {
+		@include centerer;
+		left: 40%;
+		top: 70%;
+	}
+
+	.splash-btn-no {
+		@include centerer;
+		left: 60%;
+		top: 70%;
+	}
+	img {
+		// @include centerer;
+		// top: 20%;
+		position: relative;
+		left: 38%;
+		top: 3em;
+	}
+}
+
+// UNDER LANDING SCREEN/ MAIN PAGE
+.l-section-hero {
+	//display: none;
+	opacity: 0;
+}
+
+.l-section-two {
+	display: none;
+	opacity: 0; 
+}
