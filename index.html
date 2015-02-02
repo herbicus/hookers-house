@@ -14,21 +14,28 @@
         <script src="assets/js/vendor/modernizr-2.8.0.min.js"></script>
     </head>
     <body>
-
+        <div class="l-hero-divider"></div>
         <!-- TOP HEADER -->
-        <header>
-            <div class="content-wrap">
+        <header class="top-header-section">
+            <div class=" l-header-desktop content-wrap">
+                <!-- <img src="assets/img/frame-container" alt="frame" class="l-switch-btn"> -->
+                <div class="l-switch-container">
+                    <img src="assets/img/hero-gen-hooker.png" alt="general-hooker" class="header-switch-gen">
+                    <img src="assets/img/hero-fight-joe.png" alt="fighting joe" class="header-switch-joe">
+                    
+                </div>
+                <img src="assets/img/header-bg.png" class="l-header-bg" alt="header-bg">
                 <h1 class="top-header-logo pull-left"></h1>
                 <nav class="top-header-nav">
                     <ul>
-                        <li><a href="#">OUR STORY</a></li>
-                        <li><a href="#">BUY</a></li>
+                        <li class="section-1"><a href="#">YOUR SPIRIT</a></li>
+                        <li class="section-2"><a href="#">BOURBONS</a></li>
                         <li class="l-logo"><h1 class="l-header-logo">Hooker's House Bourbon</h1></li>
-                        <li><a href="#">YOUR SPIRIT</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li class="section-3"><a href="#">OUR STORY</a></li>
+                        <li class="section-4"><a href="#">CONTACT</a></li>
                     </ul>    
                 </nav>
-            </div>
+            </div><!-- END DESKTOP LAYOUT -->
         </header>
         <!-- END HEADER -->
 
@@ -44,12 +51,35 @@
             
         </div> -->
         <div class="l-splash-overlay">
+
             <div class="content-wrap l-submit-container">
                 <img src="assets/img/logo.png" alt="logo">
+                <!-- <h1 class="text-center">You Old Enough?</h1> -->
                 <div class="l-choice-container">
-                    <h1>Are You Enough</h1>
-                    <button class="splash-btn-yes">Yes</button>
-                    <button class="splash-btn-no">No</button>
+                    <div class="l-verify-container">
+                        <h1 class="text-center">You Old Enough?</h1>
+                        <!-- <h1>You Old Enough</h1> -->
+                        <h1 class="splash-btn-yes" role="button">Yes</h1>
+                        <h1 class="splash-btn-no" role="button">No</h1>
+
+
+                    </div>
+                    <div class="l-character-choice">
+                        <figure>
+                            <img class="l-btn-general" role="button" src="assets/img/intro-gen.png" alt="general">
+                            <figcaption class="left-gen">
+                                <h2>General Hooker</h2>
+                            </figcaption>
+                        </figure>
+                        
+                        <figure>
+                            <img class="l-btn-joe" role="button" src="assets/img/intro-joe.png" alt="joe">
+                            <figcaption class="right-joe">
+                                <h2>Fighting Joe</h2>
+                            </figcaption>
+                        </figure>
+                        
+                    </div>
                 </div>
             </div>
             
@@ -58,84 +88,131 @@
         <!-- END PLASH/LANDING OVERLAY -->
         
         <!-- ABOVE THE FOLD -->
-        <section class="l-section-hero" id="aboveFold">
-            <div class="l-row">
-                <div class="two-col text-center" id="heroLeft">
-                    <h1 id="l-hero-header"></h1>
-                </div>
-                <div class="two-col" id="heroRight">
-                    <div id="l-hero-title"></div>
-                    <p id="l-hero-copy"></p>
-                    <br>
-                    <p id="l-hero-copy2"></p>
+        <section class="l-characters-section">
+            <!-- <div class="l-hero-divider"></div> -->
+            <div class="l-section-hero" id="aboveFold">
+                <div class="l-row">
+                    <h1 id="l-hero-header">ROUGH AND <br>REFINED</h1>
+                    <div class="two-col text-center" id="heroLeft">
+                        <!-- <h1 id="l-hero-header"></h1> -->
+                    </div>
+                    <div class="two-col" id="heroRight">
+                        <!-- <h1 id="l-hero-header"></h1> -->
+                        <h2 id="l-hero-title"></h2>
+                        <p id="l-hero-copy"></p>
+                        <br>
+                        <p id="l-hero-copy2"></p>
+                       <!--  <button class="l-different-general">General</button>
+                        <button class="l-different-joe">Joe</button> -->
+                    </div>
                 </div>
             </div>
         </section>
         <!-- END ABOVE THE FOLD -->
 
         <!-- 2nd SECTION -->
-        <section class="l-section-two" id="belowFold">
-          
-            <div class="l-row">
-                <div class="whole-width">
-                    <h1 class="text-center">GENERAL TAGLINE</h1>
+        <section class="l-section-2">
+            <div class="l-row l-bourbon-copy">
+                <h1>Hooker's House Bourbon</h1>
+                <div class="two-col">
+                    <p>Is an exciting new Bourbon, born in Kentucky and matured in Sonoma Valley’s wine country. After spending time in a Bourbon Belt Rick House, the Bourbon was double barreled and additionally aged in neutral Pinot Noir barrels from Schug Winery here in the Sonoma, California. Prohibition Spirits has combined the best of both worlds for a truly remarkable first of its kind American Spirit from Wine Country. The process of finishing the Bourbon in Pinot Noir barrels produces a never before tasted premium class of Bourbon filled with dark fruit flavor and smell. (HHB 100 proof small batch high Rye Bourbon finished in Pinot Noir barrels)</p>
+                </div>
+
+                <div class="two-col">
+                    <img src="assets/img/bottle.png" alt="bottle">
                 </div>
             </div>
 
-            <div class="l-row">
-                <div class="l-sidebar-container">
-                   <!--  <img src="assets/img/barrel.png" alt=""> -->
-                </div>
-                <div class="l-main-container">
-                    <p>
-                        <strong>Hooker’s House Bourbon</strong> is an exciting new Bourbon, born in Kentucky and matured in Sonoma Valley’s wine country. After spending time in a Bourbon-Belt Rick House, the Bourbon was double barreled and additionally aged in neutral Pinot Noir barrels from Schug Winery here in the Sonoma, California. Prohibition Spirits has combined the best of both worlds for a truly remarkable first of its kind American Spirit from Wine Country.  The process of finishing the Bourbon in Pinot Noir barrels produces a never before tasted premium class of Bourbon filled with dark fruit flavor and smell. (HHB 100 proof small batch high Rye Bourbon finished in Pinot Noir barrels) 
-                    </p>
-                </div>
-            </div>
-
-            <!-- changing brnnds -->
-            <div class="l-row l-glass-section">
-                <div class="two-col" id="glassLeft">
-                    <img src="assets/img/glass.png" alt="glass">
-                    <h2>Rye</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, corporis molestias mollitia beatae optio, qui molestiae hic explicabo labore provident dolore blanditiis? Eius voluptatibus eligendi quibusdam, maxime dolorum, tempore cupiditate.</p>
+            <div class="l-row l-bourbon-brands">
+                <div class="two-col l-brands-copy">
+                    <p>Small batch whiskey aged in Zinfandel barrels.</p>
                 </div>
 
-                <div class="two-col" id="glassRight">
-                    <img src="assets/img/glass2.png" alt="glass">
-                    <h2>Private's Select</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, corporis molestias mollitia beatae optio, qui molestiae hic explicabo labore provident dolore blanditiis? Eius voluptatibus eligendi quibusdam, maxime dolorum, tempore cupiditate.</p>
+                <div class="two-col l-bg-brand">
+                    <h1>Rye</h1>
                 </div>
             </div>
 
-            <!-- <div class="l-row l-map-section">
-                <div class="two-col l-map-text">
-                    <h3>Senoma California</h3>
-                    <hr>
-                    <p>After spending time in a Bourbon-Belt Rick House, the Bourbon was double barreled and additionally aged in neutral Pinot Noir barrels from Schug Winery here in the Sonoma, California. Prohibition Spirits has combined the best of both worlds for a truly remarkable first of its kind American Spirit from Wine Country.  The process of finishing the Bourbon in Pinot Noir barrels produces a never before tasted premium class of Bourbon filled with dark fruit flavor and smell. (HHB 100 proof small batch high Rye Bourbon finished in Pinot Noir barrels) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus adipisci dicta sed, quis enim sequi fuga ab aliquam. Voluptas architecto distinctio, unde ducimus est quaerat molestiae. Nostrum, doloribus aspernatur.</p>
+            <div class="l-row l-bourbon-brands">
+                <div class="two-col l-bg-brand">
+                    <h1>General's Reserve</h1>
                 </div>
-                <div class="two-col l-map-image"></div>
-            </div> -->
-
-            <div class="l-map-section">
-                <div class="l-row l-map-container">
-                    <div class="two-col l-map-text">
-                        <h2>Senoma California</h2>
-                        <hr>
-                        <p>After spending time in a Bourbon-Belt Rick House, the Bourbon was double barreled and additionally aged in neutral Pinot Noir barrels from Schug Winery here in the Sonoma, California. Prohibition Spirits has combined the best of both worlds for a truly remarkable first of its kind American Spirit from Wine Country.  The process of finishing the Bourbon in Pinot Noir barrels produces a never before tasted premium class of Bourbon filled with dark fruit flavor and smell. (HHB 100 proof small batch high Rye Bourbon finished in Pinot Noir barrels) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus adipisci dicta sed, quis enim sequi fuga ab aliquam. Voluptas architecto distinctio, unde ducimus est quaerat molestiae. Nostrum, doloribus aspernatur.</p>
-                    </div>
-                    <div class="two-col l-map-image"></div>
+                <div class="two-col l-brands-copy">
+                    <p>This rare spirit was born from barrels of 21 year old Bourbon discovered in the back of a rick house. Only 371 bottles were made; find it if you can.</p>
                 </div>
             </div>
 
+            <div class="l-row l-bourbon-brands">
+                <div class="two-col l-brands-copy">
+                    <p>A blend of straight bourbon whiskey aged between 7 and 21 years in 7 unique barrels over a period of 16 months.  A truly unique spirit</p>
+                </div>
+                
+                <div class="two-col l-bg-brand">
+                    <h1>Cohabition 7/21</h1>
+                </div>
+            </div>
 
-
+            <div class="l-row l-bourbon-brands">
+                <div class="two-col l-bg-brand">
+                    <h1>Private's Select</h1>
+                </div>
+                <div class="two-col l-brands-copy">
+                    <p>100% corn whiskey distilled in small batches in a copper still and bottled in mason jars.</p>
+                </div>
+            </div>
         </section>
         <!-- END 2nd SECTION -->
 
+        <!-- 3rd SECTION -->
+        <section class="l-section-3">
+            <div class="l-map-section l-row">
+                <div class="two-col">
+                    <img src="assets/img/mapx.png" alt="map">
+                </div>
+
+                <div class="two-col l-map-copy">
+                    <h1>Sonoma Valley</h1>
+                    <br>
+                    <p>We have hand selected premium straight single-barrel Bourbon from an excellent Kentucky distillery. The Bourbon has aged for over 6 years in new oak barrels and never blended. It contains a high content of rye, making it spicier and a little bolder. After initial aging in a Bourbon belt rick house, each barrel is transferred at barrel strength into a used Pinot Noir barrels from the Carneros wine region of Sonoma Valley. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ex saepe illum, magni vel perferendis eligendi commodi cupiditate qui ullam quis veritatis dolore necessitatibus minus rem unde aliquam doloribus animi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- END 3rd SECTION -->
+
         <!-- FOOTER -->
         <footer>
-            
+           <div class="l-footer-section l-row">
+               <div class="three-col">
+                   <h1>CONTACT</h1>
+                   <p>1234 Head Count</p>
+                   <p>Alter, GA 2234</p>
+                   <br>
+                   <br>
+                   <p>876-123-1234</p>
+                   <p>Mon - Fri: 9 -10</p>
+                   <p>Sat - Sun 1-8</p>
+               </div>
+               <div class="three-col">
+                   <!-- <h1>twitter</h1> -->
+                   <a class="twitter-timeline" href="https://twitter.com/HookersBourbon" data-widget-id="562329410838462465">Tweets by @HookersBourbon</a>
+                   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+               </div>
+               <div class="three-col l-social-container">
+                   <nav class="social-icons">
+                       <ul>
+                           <li><a href="#">b</a></li>
+                           <li><a href="#">c</a></li>
+                           <li><a href="#">a</a></li>
+                           <li><a href="#">d</a></li>
+                       </ul>
+                   </nav>
+               </div>
+           </div>
+           <div class="l-row text-center">
+               <p>copyright info bring it whaterver is said here yeah</p>
+           </div>
         </footer>
 
 

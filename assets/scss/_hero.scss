@@ -3,6 +3,10 @@
 // -------------------------------------
 // ----- Hero Section - Above the Fold
 // -------------------------------------
+.l-hero-divider {
+	height: 160px;
+	color: #FFF; 
+}
 
 .l-section-hero {
 	@include bg-cover;
@@ -13,8 +17,12 @@
 	// background: black; 
 	height: 100vh;
 	
+	//padding-top: 190px;
+	//margin-top: 150px;
+	
 	.l-row {
 		background: rgba(247, 246, 247, 0.45);
+		min-height: 100vh;
 		padding-top: 5em;
 	}
 }
@@ -24,13 +32,15 @@
 	background-attachment: fixed !important; 
 	-webkit-background-size: cover !important; 
 	-o-background-size: cover !important; 
-	background-size: cover !important; 
+	background-size: cover !important;
 }
 
 #l-hero-image {
 	//@include shadow-border($deepRed);
 	position: relative;
-	padding-top: 15%;
+	// padding-top: 15%;
+	top: 5em;
+	left: -15%;
 	
 	// font-family: 'moonshinerround';
 	// font-family: 'moonshinersharp_oblique';
@@ -45,10 +55,11 @@
 }
 
 #l-hero-header {
-	font-size: 7em;
+	font-size: 9em;
 	@include centerer;
-	top: 15%;
-	left: 30%;
+	top: 30%;
+	left: 50%;
+	text-shadow: 1px 2px 2px $cream; 
 }
 
 // #heroLeft {
@@ -57,7 +68,8 @@
 // }
 
 #heroRight {
-	padding-left: 7%;
+	padding-left: 11%;
+	padding-top: 12.5em;
 	
 	p {
 		line-height: 28px;

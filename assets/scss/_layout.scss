@@ -50,9 +50,6 @@
 	@include mq(laptop) {
 		max-width: 1024px;
 	}
-	@include mq(desktop) {
-		max-width: 1280px;
-	}
 }
 
 
@@ -78,9 +75,6 @@
 	}
 	@include mq(laptop) {
 		max-width: 1024px;
-	}
-	@include mq(desktop) {
-		max-width: 1280px;
 	}
 }
 
@@ -130,7 +124,7 @@
 body, html {
 	width: 100%;
 	height: 100%;
-	background: $cream;
+	background: #fff;
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
@@ -142,7 +136,41 @@ body {
 }
 
 section {
-	height: 100vh;
+	min-height: 100vh;
+}
+
+footer {
+	min-height: 50vh;
+	background: #000;
+	h1, p, a {
+		color: #fff;
+	}
+	.l-footer-section {
+		padding-top: 3em;
+	}
+
+	.l-social-container {
+		display: table;
+		
+	}
+
+	.social-icons {
+		display: table-cell;
+		vertical-align: bottom;
+		height: 23.5em;
+		ul {
+			text-align: center;
+			li {
+				display: inline-block;
+				padding: 0 1em;
+				a {
+					font-family: 'socicon';
+					font-size: 2em; 
+				}
+				
+			}
+		}
+	}
 }
 
 // iPad with portrait orientation.
@@ -162,16 +190,4 @@ section {
   }
 }
 
-//body {
-//  background: $cream;
-//  color: #222222;
-//  padding: 0;
-//  margin: 0;
-//  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-//  font-weight: normal;
-//  font-style: normal;
-//  line-height: 1;
-//  position: relative;
-//  cursor: default; 
-//}
 

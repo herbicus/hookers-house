@@ -4,19 +4,58 @@
 // ----- Top Header and Nav
 // -------------------------------------
 
+.top-header-section {
+	opacity: 0;
+	//display: none;
+}
+
 header {
-	height: 170px;
+	height: 160px;
 	background: url("../img/header-bg.png");
 	@include bg-cover;
 	//background: rgba(247, 246, 247, 0.65); 
 	border-top: 1px dashed #000;
-	margin-top: 10px;
-	box-shadow: 0 2px 2px $charcoal;
-	
+	// box-shadow: 0 2px 2px $charcoal;
+	position: fixed;
+	width: 100%;
+	z-index: 20;
+	top: 0;
+	.l-header-bg {
+		@include centerer;
+		top: 38%;
+	}
 	
 	ul {
 		padding: 0;
 		margin: 0;
+	}
+
+	.l-switch-container {
+		width: 170px;
+		height: 115px;
+		background: url("../img/frame-container.png");
+		@include bg-contain;
+		@include centerer;
+		z-index: 30;
+		top: 37%;
+		left: 19%;
+		img {
+			width: 45px;
+			@include centerer;
+			@include transition(all 0.3s ease-in-out);
+			&:hover {
+				cursor: pointer;
+				@include transform(translate(-25px, -25px) scale(1.25));
+			}
+			
+		}
+		.header-switch-gen {
+			left: 25%;
+		}
+		.header-switch-joe {
+			left: 74%;
+		}
+
 	}
 
 	.top-header-nav {
@@ -42,7 +81,7 @@ header {
 				font-size: 24px;
 				letter-spacing: 1px;
 				display: inline-block;
-				padding: 20px 20px;
+				// padding: 20px 20px;
 				margin-right: 10px;
 				&:last-child {
 					margin-right: 0;
@@ -52,6 +91,10 @@ header {
 					text-decoration: none;
 					@include underline-hover;
 					padding: 19px 20px;
+					&:active,
+					&:focus {
+						color: $deepRed;
+					}
 				} 
 			}
 			
