@@ -52,9 +52,14 @@ var cornerstoneAPI = (function(options) {
 
 		var sitesBackground = sites[siteIndex].loadBackground;
 		$("#aboveFold").css("background", sitesBackground);
+
+		var headerColor = sites[siteIndex].loadColor;
+		$("#l-hero-header").css("color", headerColor);
 		
-		var bgImage = $( heroDiv ).css( "background" );
-		console.log(sitesBackground);
+		var shadowColor = sites[siteIndex].loadShadow;
+		$("#l-hero-header").css("text-shadow", shadowColor);
+		// var bgImage = $( heroDiv ).css( "background" );
+		// console.log(sitesBackground);
 	};
 
 	// TWEENMAX STUFF
