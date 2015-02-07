@@ -64,7 +64,7 @@ var cornerstoneAPI = (function(options) {
 
 	// TWEENMAX STUFF
 	var menuAnimation = new TimelineMax({paused: true});
-	menuAnimation.to(".l-splash-overlay", 0.2, { left: -5, ease: Back.easeInOut});
+	menuAnimation.to(".l-mobile-nav", 0.5, { left: 0,  autoAlpha: 1, ease: Back.easeInOut});
 
 	// MOBILE ICON - HAMBURGER
 	$(".mobile-nav-btn").on("click", function(){
@@ -182,7 +182,7 @@ var cornerstoneAPI = (function(options) {
 
 		loadSite(0);
 
-		TweenMax.to(".l-section-hero, .l-section-2, .l-section-3, footer" , 0.75, {
+		TweenMax.to(".l-section-hero, .l-characters-section, .l-section-2, .l-section-3, footer" , 0.75, {
 			autoAlpha: 1,
 			display: "block",
 			ease: Back.easeInOut
@@ -208,7 +208,7 @@ var cornerstoneAPI = (function(options) {
 
 		loadSite(1);
 
-		TweenMax.to(".l-section-hero, .l-section-2, .l-section-3, footer" , 0.75, {
+		TweenMax.to(".l-section-hero, .l-characters-section, .l-section-2, .l-section-3, footer" , 0.75, {
 			autoAlpha: 1,
 			display: "block",
 			ease: Back.easeInOut

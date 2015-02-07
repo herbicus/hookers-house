@@ -117,10 +117,11 @@ h5, h6, p {
 
 #l-hero-title {
     //font-family: 'moonshinerround';
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 1px;
-    font-size: 3em;
-    text-shadow: 0 2px 2px $cream;  
+    font-size: 62px;
+    text-shadow: 0 2px 2px #000;
+    color: #fff;
 }
 
 .l-map-text {
