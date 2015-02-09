@@ -16,17 +16,23 @@
 	
 	.l-submit-container {
 		width: 700px;
-		height: 700px;
+		height: 625px;
 		//@include shadow-border(red);
 		background: url("../img/frame-container.png");
 		@include bg-contain;
 		background-position: bottom center; 
 		@include centerer;
+
+    @include media(max-width 768px, 6) {
+      background: transparent;
+
+    }
+    
 	}
 	
 	h1 {
 		text-align: center;
-		color: #000;;
+		color: #fff;
 		//padding-top: 6em;
 		position: relative;
 		//top: 1em;
@@ -36,6 +42,11 @@
 			cursor: pointer;
 			color: $deepRed;
 		}
+    @include media(max-width 768px, 6) {
+      color: #fff;
+
+    }
+
 		
 	}
 
@@ -53,8 +64,11 @@
 		height: 360px;
 		.l-btn-general {
 			@include centerer;
-			top: 56%;
-			left: 23%;
+//			top: 56%;
+//			left: 23%;
+      top: 43%;
+      left: 18%;
+      width: 23%;
 			&:hover {
 				cursor: pointer;
 			}
@@ -65,8 +79,11 @@
 
 		.l-btn-joe {
 			@include centerer;
-			top: 53%;
-			left: 76%;
+//			top: 53%;
+//			left: 76%;
+      top: 45%;
+      left: 82%;
+      width: 23%;
 			&:hover {
 				cursor: pointer;
 			}
@@ -79,29 +96,34 @@
 			@include centerer;
 			@include transition (all 0.3s ease-in-out);
 			top: -21%;
+      h2 {
+        color: #fff;
+      }
 		}
 
 		.left-gen {
-			left: 23%;
+			left: 18%;
 		}
 
 		.right-joe {
-			left: 78%;
+			left: 82.5%;
 		}
 	}
 
 	.splash-btn-yes {
 		@include centerer;
-		left: 23%;
-		top: 3.75em;
+		left: 17.5%;
+		top: 3.25em;
 		font-size: 5em;
+    color: #000;
 	}
 
 	.splash-btn-no {
 		@include centerer;
-		left: 77%;
-		top: 3.75em;
+		left: 82%;
+		top: 3.25em;
 		font-size: 5em;
+    color: #000;
 	}
 	img {
 		// @include centerer;

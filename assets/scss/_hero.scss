@@ -23,7 +23,10 @@
 	// background: rgba(247, 246, 247, 0.65);
 	// background: black; 
 	height: 100vh;
-	
+
+  @include media(max-width 768px, 6) {
+    overflow: scroll;
+  }
 	//padding-top: 190px;
 	//margin-top: 150px;
 	
@@ -41,6 +44,10 @@
 	-o-background-size: cover !important; 
 	background-size: cover !important;
 }
+
+//.l-copy-desktop {
+//
+//}
 
 #l-hero-image {
 	//@include shadow-border($deepRed);
@@ -70,9 +77,15 @@
 	text-shadow: 1px 2px 2px $cream;
   z-index: 1;
   font-weight: normal;
+  padding-top: 0.25em;
 
   @include media(max-width 1280px, 6) {
     font-size: 11em;
+  }
+
+
+  @include media(max-width 768px, 6) {
+    font-size: 8.5em;
   }
 }
 
@@ -116,6 +129,7 @@
   @include media(min-width 1285px, 6) {
     padding-top: 22em;
   }
+
 }
 
 

@@ -10,7 +10,7 @@ var cornerstoneAPI = (function(options) {
 	var heroHeader = document.getElementById("l-hero-header");
 	var heroTitle = document.getElementById("l-hero-title");
 	var heroCopy = document.getElementById("l-hero-copy");
-	//var heroCopy2 = document.getElementById("l-hero-copy2");
+	var heroCopy2 = document.getElementById("l-hero-copy2");
 	var heroDiv = document.getElementById("aboveFold");
 	var leftContainer = document.getElementById("heroLeft");
 	var rightContainer = document.getElementById("heroRight");
@@ -48,7 +48,7 @@ var cornerstoneAPI = (function(options) {
 		//heroHeader.innerHTML = sites[siteIndex].loadHeader;
 		heroTitle.innerHTML = sites[siteIndex].loadTitle;
 		heroCopy.innerHTML = sites[siteIndex].loadCopy;
-		//heroCopy2.innerHTML = sites[siteIndex].loadCopy2;
+		heroCopy2.innerHTML = sites[siteIndex].loadCopy2;
 
 		var sitesBackground = sites[siteIndex].loadBackground;
 		$("#aboveFold").css("background", sitesBackground);

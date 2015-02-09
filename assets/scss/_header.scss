@@ -11,8 +11,11 @@
 
 header {
 	height: 160px;
-	background: url("../img/header-bg.png");
-	
+	background: url("../img/header-bg-x.png");
+  background: $primaryDark;
+  -webkit-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
+  -moz-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
+  box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
 	@include bg-cover;
 	//background: rgba(247, 246, 247, 0.65); 
 	border-top: 1px dashed #000;
@@ -47,8 +50,8 @@ header {
 			width: 45px;
 			@include centerer;
 			@include transition(all 0.3s ease-in-out);
-      -webkit-filter: invert(.8);
-      filter: invert(.8);
+//      -webkit-filter: invert(.8);
+//      filter: invert(.8);
 			&:hover {
 				cursor: pointer;
 				@include transform(translate(-25px, -25px) scale(1.25));
@@ -71,13 +74,13 @@ header {
 	}
 
 	.top-header-nav {
-		background: url("../img/header-divider.png");
+		//background: url("../img/header-divider.png");
 		@include bg-contain;
 		background-position: bottom center; 
 		height: 50px;
 		width: 100%;
 		position: relative;
-		top: 115px;
+		top: 126px;
 		
 		ul {
 			margin: 0 auto;
@@ -99,20 +102,23 @@ header {
 					margin-right: 0;
 				}
 				a {
-					color: #000;
+					color: #fff;
 					text-decoration: none;
 					@include underline-hover;
 					padding: 19px 20px;
+          font-weight: normal;
 					&:active,
-					&:focus {
-						color: $deepRed;
+					&:focus,
+          &:hover {
+						//@include border-hover($silver);
+						color: $silver;
 					}
 				} 
 			}
 			
 			// SITE LOGO
 			.l-header-logo { // <h1>
-				background: url("../img/logo.png");
+				background: url("../img/logo-wht.png");
 				@include bg-cover;
 				text-indent: -9999px; 
 				position: relative;
@@ -122,6 +128,9 @@ header {
 				height: 138px;
 				top: -65px;
 				//@include pop-hover;
+       &:hover {
+         cursor: pointer;
+       }
 				
 			}
 		}
