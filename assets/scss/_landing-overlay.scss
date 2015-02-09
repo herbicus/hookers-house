@@ -116,6 +116,10 @@
 		top: 3.25em;
 		font-size: 5em;
     color: #000;
+    @include media(max-width 768px, 6) {
+      color: #fff;
+
+    }
 	}
 
 	.splash-btn-no {
@@ -124,12 +128,16 @@
 		top: 3.25em;
 		font-size: 5em;
     color: #000;
+    @include media(max-width 768px, 6) {
+      color: #fff;
+
+    }
 	}
 	img {
 		// @include centerer;
 		// top: 20%;
 		position: relative;
-		left: 38%;
+		left: 35%;
 		top: 3em;
 	}
 }

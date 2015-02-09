@@ -151,16 +151,26 @@ footer {
 
 	.l-social-container {
 		display: table;
-		
+    text-align: center;
 	}
 
+  iframe {
+    width: 100%;
+  }
+
+  h4 {
+    color: transparent;
+  }
+
 	.social-icons {
-		display: table-cell;
+		//display: table-cell;
 		vertical-align: bottom;
-		height: 23.5em;
+		//height: 23.5em;
 		ul {
 			text-align: center;
+      padding: 0;
 			li {
+        text-align: center;
 				display: inline-block;
 				padding: 0 1em;
 				a {

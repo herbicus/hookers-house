@@ -11,7 +11,7 @@
 
 header {
 	height: 160px;
-	background: url("../img/header-bg-x.png");
+	//background: url("../img/header-bg-x.png");
   background: $primaryDark;
   -webkit-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
   -moz-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
@@ -80,15 +80,14 @@ header {
 		height: 50px;
 		width: 100%;
 		position: relative;
-		top: 126px;
+		top: 123.4px;
 		
 		ul {
 			margin: 0 auto;
 			width: 100%;
 			text-align: center;
 			@include centerer;
-			top: -25px;
-			top: 20px;
+			top: 19px;
 			
 			li {
 				font-family: 'moonshinersharp';
@@ -119,18 +118,18 @@ header {
 			// SITE LOGO
 			.l-header-logo { // <h1>
 				background: url("../img/logo-wht.png");
-				@include bg-cover;
+				@include bg-contain;
 				text-indent: -9999px; 
 				position: relative;
 				// font-size: 6em;
 				// top: -30px;
-				font-size: 3em;
+				//font-size: 3em;
 				height: 138px;
 				top: -65px;
 				//@include pop-hover;
-       &:hover {
-         cursor: pointer;
-       }
+        &:hover {
+          cursor: pointer;
+        }
 				
 			}
 		}
@@ -242,6 +241,11 @@ header .l-mobile-layout {
         background: #262626;
         border-bottom: 1px solid $charcoal;
         text-transform: uppercase;
+
+        a {
+          color: #fff;
+          font-size: 1.25em;
+        }
       }
     }
   }

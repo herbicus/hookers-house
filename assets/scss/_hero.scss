@@ -126,8 +126,16 @@
     }
   }
 
+//  @include media(min-width 1285px, 6) {
+//    padding-top: 22em;
+//  }
   @include media(min-width 1285px, 6) {
     padding-top: 22em;
+  }
+
+  @include media(max-width 768px, 6) {
+    padding: 0 4%;
+    position: relative;
   }
 
 }

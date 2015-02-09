@@ -143,12 +143,37 @@ var cornerstoneAPI = (function(options) {
 					}
 				});
 			}
-		});
+		}); // end tweenmax
+
+    // AUDIO
+    var playing = false;
+
+    if (playing == true) {
+      document.getElementById('generalAudio').pause();
+      playing = false;
+
+    } else {
+      document.getElementById('generalAudio').play();
+      playing = true;
+    }
+
 	});
 
 	$(".header-switch-joe").on("click", function(){
 
-		TweenMax.to("#aboveFold" , 0.5, {
+    // AUDIO
+    var playing = false;
+
+    if (playing == true) {
+      document.getElementById('joeAudio').pause();
+      playing = false;
+
+    } else {
+      document.getElementById('joeAudio').play();
+      playing = true;
+    }
+
+    TweenMax.to("#aboveFold" , 0.5, {
 			marginLeft: -100,
 			display: "none",
 			autoAlpha: 0,
@@ -170,7 +195,17 @@ var cornerstoneAPI = (function(options) {
 
 	// SPLASH SCREEN GENERAL BUTTON
 	$(".l-btn-general").on("click", function(){
-		TweenMax.to(".l-splash-overlay" , 0.75, {
+    TweenMax.to(".l-splash-overlay" , 0.75, {
+      css: {background: "transparent" },
+      ease: Quad.easeInOut
+    });
+
+    TweenMax.to(".l-character-choice figcation, .l-overlay-logo" , 0.75, {
+      autoAlpha: 0,
+      ease: Quad.easeInOut
+    });
+
+    TweenMax.to(".l-splash-overlay" , 0.75, {
 			//left: "200%",
 			autoAlpha: 0,
 			scale: 0,
@@ -192,11 +227,35 @@ var cornerstoneAPI = (function(options) {
 			// left: "200%",
 			autoAlpha: 1,
 			ease: Quad.easeInOut
-		}); 
+		});
+
+    // AUDIO
+    var playing = false;
+
+    if (playing == true) {
+      document.getElementById('generalAudio').pause();
+      playing = false;
+
+    } else {
+      document.getElementById('generalAudio').play();
+      playing = true;
+    }
+
 	});
 
 	// SPLASH SCREEN JOE BUTTON
+
 	$(".l-btn-joe").on("click", function(){
+    TweenMax.to(".l-splash-overlay" , 0.75, {
+      css: {background: "transparent" },
+      ease: Quad.easeInOut
+    });
+
+    TweenMax.to(".l-character-choice figcation, .l-overlay-logo" , 0.75, {
+      autoAlpha: 0,
+      ease: Quad.easeInOut
+    });
+
 		TweenMax.to(".l-splash-overlay" , 0.75, {
 			autoAlpha: 0,
 			scale: 0,
@@ -218,7 +277,20 @@ var cornerstoneAPI = (function(options) {
 			// left: "200%",
 			autoAlpha: 1,
 			ease: Quad.easeInOut
-		}); 
+		});
+
+    // AUDIO
+    var playing = false;
+
+    if (playing == true) {
+      document.getElementById('joeAudio').pause();
+      playing = false;
+
+    } else {
+      document.getElementById('joeAudio').play();
+      playing = true;
+    }
+
 	});
 
 	// HEADER STUFF - FUNCTIONALITY
