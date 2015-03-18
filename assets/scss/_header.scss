@@ -6,20 +6,16 @@
 
 .top-header-section {
 	opacity: 0;
-	//display: none;
 }
 
 header {
 	height: 160px;
-	//background: url("../img/header-bg-x.png");
-  background: $primaryDark;
-  -webkit-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
-  -moz-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
-  box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
+	background: $primaryDark;
+	-webkit-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
+	-moz-box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
+	box-shadow: 0px 3.75px 5px rgba(0,0,0,1.5);
 	@include bg-cover;
-	//background: rgba(247, 246, 247, 0.65); 
 	border-top: 1px dashed #000;
-	// box-shadow: 0 2px 2px $charcoal;
 	position: fixed;
 	width: 100%;
 	z-index: 20;
@@ -27,9 +23,10 @@ header {
 	.l-header-bg {
 		@include centerer;
 		top: 38%;
-    @include media(max-width 1024px, 6) {
-      display: none;
-    }
+		
+	    @include media(max-width 1024px, 6) {
+	      display: none;
+	    }
 	}
 	
 	ul {
@@ -38,9 +35,8 @@ header {
 	}
 
 	.l-switch-container {
-		width: 170px;
+		width: 90px;
 		height: 115px;
-		//background: url("../img/frame-container.png");
 		@include bg-contain;
 		@include centerer;
 		z-index: 30;
@@ -50,31 +46,27 @@ header {
 			width: 45px;
 			@include centerer;
 			@include transition(all 0.3s ease-in-out);
-//      -webkit-filter: invert(.8);
-//      filter: invert(.8);
+			
 			&:hover {
 				cursor: pointer;
 				@include transform(translate(-25px, -25px) scale(1.25));
 			}
-			
+				
 		}
 		.header-switch-gen {
 			left: 25%;
 		}
 		.header-switch-joe {
-			left: 74%;
+			left: 100%;
 		}
 
-    @include media(max-width 1024px, 6) {
-//      top: 50%;
-//      left: 50%;
-      display: none;
-    }
+		@include media(max-width 1024px, 6) {
+		  display: none;
+		}
 
 	}
 
 	.top-header-nav {
-		//background: url("../img/header-divider.png");
 		@include bg-contain;
 		background-position: bottom center; 
 		height: 50px;
@@ -95,21 +87,20 @@ header {
 				font-size: 24px;
 				letter-spacing: 1px;
 				display: inline-block;
-				// padding: 20px 20px;
 				margin-right: 10px;
 				&:last-child {
 					margin-right: 0;
 				}
+
 				a {
 					color: #fff;
 					text-decoration: none;
 					@include underline-hover;
 					padding: 19px 20px;
-          font-weight: normal;
+          			font-weight: normal;
 					&:active,
 					&:focus,
-          &:hover {
-						//@include border-hover($silver);
+         			&:hover {
 						color: $silver;
 					}
 				} 
@@ -121,37 +112,26 @@ header {
 				@include bg-contain;
 				text-indent: -9999px; 
 				position: relative;
-				// font-size: 6em;
-				// top: -30px;
-				//font-size: 3em;
 				height: 138px;
 				top: -65px;
-				//@include pop-hover;
-        &:hover {
-          cursor: pointer;
-        }
+		        
+		        &:hover {
+		          cursor: pointer;
+		        }
 				
 			}
 		}
-    @include media(max-width 1024px, 6) {
-      display: none;
-    }
+
+	    @include media(max-width 1024px, 6) {
+	      display: none;
+	    }
 	}
 
-  // header media query
-  @include media(max-width 1024px, 6) {
-     background: #fff;
-    height: 75px;
-   }
-
-	// .l-logo {
-	// 	.l-header-logo { // <h1>
-	// 		@include shadow-border(red);
-	// 		background: url("../img/logo.png");
-	// 		@include bg-cover;
-	// 		text-indent: -9999px; 
-	// 	}
-	// }
+  	// header media query
+	@include media(max-width 1024px, 6) {
+		background: #fff;
+		height: 75px;
+	}
 }
 
 header .l-mobile-layout {
@@ -168,63 +148,63 @@ header .l-mobile-layout {
   }
 
   // ANIMATED HAMBURGER ICON TOGGLE BUTTON
-  .mobile-nav-btn {
-    position: absolute;
-    z-index: 9999;
-    width: 60px;
-    height: 120px;
-    left: 89%;
-    @include transition-duration(0.5s);
+	.mobile-nav-btn {
+		position: absolute;
+		z-index: 9999;
+		width: 60px;
+		height: 120px;
+		left: 89%;
+		@include transition-duration(0.5s);
 
-    .icon {
-      @include transition-duration(0.5s);
-      position: absolute;
-      height: 3px;
-      width: 25px;
-      top: 35px; // position of hamburger
-      left: -3px;
-      background-color: #000;
+	    .icon {
+			@include transition-duration(0.5s);
+			position: absolute;
+			height: 3px;
+			width: 25px;
+			top: 35px; // position of hamburger
+			left: -3px;
+			background-color: #000;
 
-      &:before {
-        @include transition-duration(0.5s);
-        position: absolute;
-        height: 3px;
-        width: 25px;
-        background-color: #000;
-        content: "";
-        top: -8px;
-      }
+			&:before {
+				@include transition-duration(0.5s);
+				position: absolute;
+				height: 3px;
+				width: 25px;
+				background-color: #000;
+				content: "";
+				top: -8px;
+			}
 
-      &:after {
-        @include transition-duration(0.5s);
-        position: absolute;
-        height: 3px;
-        width: 25px;
-        background-color: #000;
-        content: "";
-        top: 8px;
-      }
+			&:after {
+				@include transition-duration(0.5s);
+				position: absolute;
+				height: 3px;
+				width: 25px;
+				background-color: #000;
+				content: "";
+				top: 8px;
+			}
 
-      &:hover{
-        cursor: pointer;
-      }
-    }
+			&:hover{
+				cursor: pointer;
+			}
+	    }
 
-    &.open {
-      .icon {
-        @include transition-duration(0.5s);
-        background: transparent;
+	    &.open {
+			.icon {
+				@include transition-duration(0.5s);
+				background: transparent;
 
-        &:before {
-          @include transform( rotateZ(45deg) scaleX(1.25) translate(6px, 5px) );
-        }
+				&:before {
+					@include transform( rotateZ(45deg) scaleX(1.25) translate(6px, 5px) );
+				}
 
-        &:after {
-          @include transform( rotateZ(-45deg) scaleX(1.25) translate(5px, -4px) );
-        }
-      }
-    }
-  } // END ANIMATED HAMBURGER TOGGLE BUTTON
+				&:after {
+					@include transform( rotateZ(-45deg) scaleX(1.25) translate(5px, -4px) );
+				}
+			}
+	    }
+  	} // END ANIMATED HAMBURGER TOGGLE BUTTON
 
   nav {
     position: absolute;
@@ -233,14 +213,14 @@ header .l-mobile-layout {
     left: -100%;
     opacity: 0;
     ul {
-      text-align: center;
-      li {
-        font-family: 'moonshinersharp';
-        display: block;
-        padding: 1em 0;
-        background: #262626;
-        border-bottom: 1px solid $charcoal;
-        text-transform: uppercase;
+    	text-align: center;
+	li {
+		font-family: 'moonshinersharp';
+		display: block;
+		padding: 1em 0;
+		background: #262626;
+		border-bottom: 1px solid $charcoal;
+		text-transform: uppercase;
 
         a {
           color: #fff;
@@ -254,3 +234,49 @@ header .l-mobile-layout {
   }
 
 } // END MOBILE LAYOUT
+
+.l-header-switch-container {
+	position: relative;
+	z-index: 1; 
+}
+
+.l-switch-btn-left {
+	position: absolute;
+	left: 10%;
+	top: 25px;
+	width: 60px;
+	height: 60px;
+	background: url("../img/hero-gen-hooker.png");
+	@include bg-contain;
+	-webkit-border-radius: 50%; 
+	border-radius: 50%;
+	overflow: hidden;
+	@include fade-hover;
+	
+	@include media(max-width 1024px, 6) {
+		left: 15%;
+		top: 7px;
+	}
+
+	@include media(max-width 480px, 6) {
+		left: 30%;
+	}
+}
+
+.l-switch-btn-right {
+	position: absolute;
+	right: 10%;
+	top: 25px;
+	width: 60px;
+	height: 60px;
+	background: url("../img/hero-fight-joe.png");
+	@include bg-contain;
+	overflow: hidden;
+	@include fade-hover;
+	
+	@include media(max-width 1024px, 6) {
+		right: 15%;
+		top: 10px;
+	}
+}
+

@@ -25,20 +25,20 @@
 		img {
 			position: relative;
 			left: 50%;
-      @include media(max-width 480px, 6) {
-        left: 25%;
-      }
+		    @include media(max-width 480px, 6) {
+		        left: 25%;
+		    }
 		}
 
-    h1 {
-      text-indent: 1%;
-      font-size: 7em;
-      font-weight: normal;
+	    h1 {
+	      text-indent: 1%;
+	      font-size: 7em;
+	      font-weight: normal;
 
-      @include media(max-width 768px, 6) {
-        font-size: 2.25em;
-      }
-    }
+	      @include media(max-width 768px, 6) {
+	        font-size: 2.25em;
+	      }
+	    }
 
 		p {
 			line-height: 1.75em;
@@ -50,19 +50,14 @@
 
 	.l-bourbon-brands {
 		.two-col {
-			// @include shadow-border(green);
 			height: 200px;
 			text-align: center;
-			//position: relative;
 			display: table;
-//      h1 {
-//        color: $primaryDark;
-//      }
 		}
 
 		.l-brands-copy {
 			//padding-left: 5%;
-      padding: 0 2%;
+      		padding: 0 2%;
 			h1 {
 				font-size: 3em;
 				padding: 2em 0;
@@ -87,73 +82,76 @@
 				display: table-cell;
 				vertical-align: middle;
 				font-size: 4em;
-        @include media(max-width 480px, 6) {
-          font-size: 3em;
-        }
+		        @include media(max-width 480px, 6) {
+		          font-size: 3em;
+		        }
 			}
 		}
+
+		@include media(max-width 768px, 6) {
+			border-bottom: 1px solid $primaryDark;
+		}
 	}
+}
+
+.full-width h2 {
+  color: $primaryDark;
 }
 
 // MAP SECTION - 3
 
 .l-section-3 {
 	position: relative;
-	background: url('../img/wood-paper-bg-x.jpg')fixed;
+	background: url('../img/wood-paper-bg.jpg')fixed;
 	@include bg-cover;
-  overflow: hidden;
+  	overflow: hidden;
 	.l-map-section {
-		//padding-top: 8em;
-		//background: rgba(247, 246, 247, 0.45);
 		min-height: 100vh;
 		img {
-			//max-width: 150%;
-			//width: 130%;
-      position: relative;
-      top: 10em;
-      left: -20%;
-      -webkit-box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
-      box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
-			@include transform(rotate(6deg));
-//      -webkit-box-shadow: inset h v blur spread rgba(0, 0, 0, 0.5);
-//      -moz-box-shadow: inset h v blur spread rgba(0, 0, 0, 0.5);
-//      box-shadow: inset h v blur spread rgba(0, 0, 0, 0.5);
-			
+			width: 100%;
+			max-width: 100%;
+			position: relative;
+			top: 10em;
+			left: -20%;
+			-webkit-box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+			box-shadow: 4px 7px 7px rgba(0, 0, 0, 0.5);
+			@include transform(rotate(6deg));			
 		}
 
 		.l-map-copy {
-			//position: relative;
-			//padding-left: 16%;
-      padding: 10em 2% 1em 2%;
-      h1 {
-        text-shadow: 0 2px 2px #000;
-        //color: #fff;
-        font-weight: bold;
-      }
-      p {
-        text-shadow: 0 2px 2px #000;
-        font-weight: bold;
-        color: #fff;
-        font-size: 24px;
-        line-height: 30px;
-        letter-spacing: 0.5px;
-        @include media(max-width 1280px, 6) {
-          font-size: 18px;
-          letter-spacing: 0;
-        }
-      }
-    }
+      		padding: 10em 2% 1em 2%;
+			
+			h1 {
+				text-shadow: 0 2px 2px #000;
+				font-weight: bold;
+			}
+			
+			p {
+				text-shadow: 0 2px 2px #000;
+				font-weight: bold;
+				color: #fff;
+				font-size: 24px;
+				line-height: 30px;
+				letter-spacing: 0.5px;
+				@include media(max-width 1280px, 6) {
+				font-size: 18px;
+				letter-spacing: 0;
+				}
+			}
+    	}
 	}
-  @include media(max-width 1024px, 6) {
-    .l-map-section {
-      img {
-        top: 5em;
-      }
-    }
-    .l-map-copy {
-      padding: 0 5%;
-      padding-top: 1em;
-    }
-  }
+
+	@include media(max-width 1024px, 6) {
+		.l-map-section {
+			img {
+				top: 5em;
+			}
+		}
+
+		.l-map-copy {
+			padding: 0 5%;
+			padding-top: 1em;
+		}
+  	}
 }

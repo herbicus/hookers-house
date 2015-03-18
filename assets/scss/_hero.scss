@@ -6,9 +6,10 @@
 .l-hero-divider {
 	height: 160px;
 	color: #FFF;
-  @include media(max-width 1024px, 6) {
-    height: 75px;
-  }
+	
+	@include media(max-width 1024px, 6) {
+		height: 75px;
+	}
 }
 
 .l-characters-section {
@@ -17,21 +18,15 @@
 
 .l-section-hero {
 	@include bg-cover;
-	//padding-top: 5em;
 	position: relative;
 	overflow: hidden;
-	// background: rgba(247, 246, 247, 0.65);
-	// background: black; 
 	height: 100vh;
 
-  @include media(max-width 768px, 6) {
-    overflow: scroll;
-  }
-	//padding-top: 190px;
-	//margin-top: 150px;
+	@include media(max-width 768px, 6) {
+		overflow: scroll;
+	}
 	
 	.l-row {
-		//background: rgba(247, 246, 247, 0.45);
 		min-height: 100vh;
 		padding-top: 5em;
 	}
@@ -45,21 +40,12 @@
 	background-size: cover !important;
 }
 
-//.l-copy-desktop {
-//
-//}
-
 #l-hero-image {
 	//@include shadow-border($deepRed);
 	position: relative;
-	// padding-top: 15%;
 	top: 5em;
 	left: -15%;
-	
-	// font-family: 'moonshinerround';
-	// font-family: 'moonshinersharp_oblique';
-	// font-family: 'moonshinersharp';
-	// font-family: 'moonshinerround_oblique';
+
 	h1 {
 		font-family: 'moonshinersharp';
 		font-weight: bold;
@@ -70,85 +56,59 @@
 
 #l-hero-header {
 	font-size: 14em;
-  line-height: 0.95em;
+	line-height: 0.95em;
 	@include centerer;
 	top: 30%;
 	left: 50%;
 	text-shadow: 1px 2px 2px $cream;
-  z-index: 1;
-  font-weight: normal;
-  padding-top: 0.25em;
+	z-index: 1;
+	font-weight: normal;
+ 	padding-top: 0.25em;
 
-  @include media(max-width 1280px, 6) {
-    font-size: 11em;
-  }
+	@include media(max-width 1280px, 6) {
+		font-size: 11em;
+	}
 
 
-  @include media(max-width 768px, 6) {
-    font-size: 8.5em;
-  }
+	@include media(max-width 768px, 6) {
+		font-size: 8.5em;
+	}
 }
 
-// #heroLeft {
-// 	position: relative;
-// 	overflow: hidden;
-// }
-
-//#heroLeft {
-//  @include media(max-width 1280px, 6) {
-//    padding-top: 14.5em;
-//  }
-//}
 #heroLeft {
-  @include media(min-width 1285px, 6) {
-    padding-top: 16em;
-  }
+	@include media(min-width 1285px, 6) {
+		padding-top: 16em;
+	}
 }
 
 #heroRight {
-  padding: 12.5em 6% 0 10%;
+	padding: 12.5em 6% 0 10%;
 	
 	p {
 		text-shadow: 0 2px 2px #000;
 		font-weight: bold;
-    color: #fff;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0.5px;
+	    color: #fff;
+	    font-size: 24px;
+	    line-height: 30px;
+	    letter-spacing: 0.5px;
 	}
 
-  @include media(max-width 1280px, 6) {
-    padding: 14.5em 2% 0 13%;
+	@include media(max-width 1280px, 6) {
+		padding: 14.5em 2% 0 13%;
 
-    p {
-      font-size: 18px;
-      letter-spacing: 0;
-    }
-  }
+		p {
+			font-size: 18px;
+			letter-spacing: 0;
+		}
+	}
 
-//  @include media(min-width 1285px, 6) {
-//    padding-top: 22em;
-//  }
-  @include media(min-width 1285px, 6) {
-    padding-top: 22em;
-  }
+	@include media(min-width 1285px, 6) {
+		padding-top: 22em;
+	}
 
-  @include media(max-width 768px, 6) {
-    padding: 0 4%;
-    position: relative;
-  }
+	@include media(max-width 768px, 6) {
+		padding: 0 4%;
+		position: relative;
+	}
 
 }
-
-
-
-// li {
-// 	display: inline-block;
-// 	padding-top: 20px;
-// 	margin-right: 10px;
-// 	a {
-// 		color: #000;
-// 		text-decoration: none;
-// 		@include underline-hover;
-// 	}
-// }

@@ -14,20 +14,44 @@
         <script src="assets/js/vendor/modernizr-2.8.0.min.js"></script>
     </head>
     <body>
-        <!-- CARD FLIP AUDIO -->
+        <!-- CHARACTERR AUDIO -->
         <audio id="generalAudio" src="assets/audio/gen.mp3" preload="auto"></audio>
         <audio id="joeAudio" src="assets/audio/joe.mp3" preload="auto"></audio>
+
+        <div class="l-preload-overlay">
+            <div class="spinner">
+                <p class="text-center">loading...</p>
+                <div class="spinner-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+            </div>
+
+        </div>
 
         <div class="l-hero-divider"></div>
         <!-- TOP HEADER -->
         <header class="top-header-section">
             <div class=" l-header-desktop content-wrap">
-                <!-- <img src="assets/img/frame-container" alt="frame" class="l-switch-btn"> -->
-                <div class="l-switch-container">
-                    <img src="assets/img/hero-gen-hooker.png" alt="general-hooker" class="header-switch-gen">
-                    <img src="assets/img/hero-fight-joe.png" alt="fighting joe" class="header-switch-joe">
-                    
+                <div class="l-header-switch-container row">
+                    <div class="l-switch-btn-left"></div>
+                    <div class="l-switch-btn-right"></div>
                 </div>
+
                 <img src="assets/img/header-bg-z1.png" class="l-header-bg" alt="header-bg">
                 <h1 class="top-header-logo pull-left"></h1>
                 <nav class="top-header-nav">
@@ -60,22 +84,10 @@
         </header>
         <!-- END HEADER -->
 
-        <!-- SPLASH/LANDING OVERLAY -->
-
-        <!-- <div class="l-splash-overlay">
-            <div class="content-wrap">
-                <img src="assets/img/logo.png" alt="logo">
-                <h1>Are You Old Enough</h1>
-                <button class="splash-btn-yes">Yes</button>
-                <button class="splash-btn-no">No</button>
-            </div>
-            
-        </div> -->
         <div class="l-splash-overlay">
 
             <div class="content-wrap l-submit-container">
                 <img src="assets/img/logo-wht.png" class="l-overlay-logo" alt="logo">
-                <!-- <h1 class="text-center">You Old Enough?</h1> -->
                 <div class="l-choice-container">
                     <div class="l-verify-container">
                         <h1 class="text-center">You Old Enough?</h1>
@@ -107,45 +119,31 @@
         </div>
 
         <!-- END SPLASH/LANDING OVERLAY -->
+
+        <!-- lightbox overlay -->
+
+
+
+        <!-- end lightbox overlay -->
         
         <!-- ABOVE THE FOLD -->
         <section class="l-characters-section">
             <!-- <div class="l-hero-divider"></div> -->
             <div class="l-section-hero" id="aboveFold">
                 <div>
-                    <h1 id="l-hero-header">ROUGH AND <br>REFINED</h1>
+                    <h1 id="l-hero-header"><span id="joe-header-text">ROUGH</span> AND <br><span id="gen-header-text>">REFINED</span></h1>
                     <!--desktop layout-->
                     <div class="l-copy-desktop">
                         <div class="two-col text-center" id="heroLeft">
-                            <!-- <h1 id="l-hero-header"></h1> -->
                         </div>
                         <div class="two-col" id="heroRight">
-                            <!-- <h1 id="l-hero-header"></h1> -->
                             <h2 id="l-hero-title"></h2>
                             <p id="l-hero-copy"></p>
                             <br>
-                            <!--<p id="l-hero-copy2"></p>-->
-                            <!--  <button class="l-different-general">General</button>
-                             <button class="l-different-joe">Joe</button> -->
                         </div>
                     </div>
                     <!-- end desktop layout-->
 
-                    <!-- mobile copy layout -->
-
-                    <!--<div class="l-copy-mobile l-row">-->
-                        <!--<div class="two-col text-center" id="heroLeft">-->
-                            <!--&lt;!&ndash; character header/name &ndash;&gt;-->
-                        <!--</div>-->
-                        <!--<div class="two-col" id="heroRight">-->
-                            <!--&lt;!&ndash; copy &ndash;&gt;-->
-                            <!--<h2 id="l-hero-title"></h2>-->
-                            <!--<p id="l-hero-copy"></p>-->
-                            <!--<br>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!-- end mobile copy layout -->
                 </div>
             </div>
         </section>
@@ -156,7 +154,6 @@
             <div class="l-row l-bourbon-copy">
                 <h1>Hooker's House Bourbon</h1>
                 <div class="two-col">
-                    <!--<p>Is an exciting new Bourbon, born in Kentucky and matured in Sonoma Valley’s wine country. After spending time in a Bourbon Belt Rick House, the Bourbon was double barreled and additionally aged in neutral Pinot Noir barrels from Schug Winery here in the Sonoma, California. Prohibition Spirits has combined the best of both worlds for a truly remarkable first of its kind American Spirit from Wine Country. The process of finishing the Bourbon in Pinot Noir barrels produces a never before tasted premium class of Bourbon filled with dark fruit flavor and smell. (HHB 100 proof small batch high Rye Bourbon finished in Pinot Noir barrels)</p>-->
                     <p id="l-hero-copy2"></p>
                 </div>
 
@@ -165,13 +162,10 @@
                 </div>
             </div>
 
-            <div class="l-row l-bourbon-brands">
-                <div class="two-col l-brands-copy">
-                    <p>Small batch whiskey aged in Zinfandel barrels.</p>
-                </div>
+            <div class="l-row">
+                <div class="full-width text-center">
+                    <h2 id="l-char-tagline"></h2>
 
-                <div class="two-col l-bg-brand">
-                    <h1>Rye</h1>
                 </div>
             </div>
 
@@ -202,6 +196,16 @@
                     <p>100% corn whiskey distilled in small batches in a copper still and bottled in mason jars.</p>
                 </div>
             </div>
+
+            <div class="l-row l-bourbon-brands">
+                <div class="two-col l-brands-copy">
+                    <p>Small batch whiskey aged in Zinfandel barrels.</p>
+                </div>
+
+                <div class="two-col l-bg-brand">
+                    <h1>Rye</h1>
+                </div>
+            </div>
         </section>
         <!-- END 2nd SECTION -->
 
@@ -217,24 +221,24 @@
                     <br>
                     <p>To get to where we are now, you must begin in Kentucky. We hand-select premium, never-blended
 
-                        single-barrel Bourbon that ages atleast 6 years in new oak barrels. With a high content of rye, the
+                    single-barrel Bourbon that ages atleast 6 years in new oak barrels. With a high content of rye, the
 
-                        bourbon is spicier and a little bolder. After the initial aging, each barrel is transferred at barrel strength
+                    bourbon is spicier and a little bolder. After the initial aging, each barrel is transferred at barrel strength
 
-                        into a used Pinot Noir barrels from the Carneros wine region of Sonoma Valley. The French wine barrels
+                    into a used Pinot Noir barrels from the Carneros wine region of Sonoma Valley. The French wine barrels
 
-                        were hand selected based on flavor profiles from the previous wine vintages by the head wine maker
+                    were hand selected based on flavor profiles from the previous wine vintages by the head wine maker
 
-                        Mike Cox who had commissioned these barrels while visiting Burgundy, France.</p>
+                    Mike Cox who had commissioned these barrels while visiting Burgundy, France.</p>
                     <p>The secondary aging (or
 
-                        doubling-barreling) imparts subtle flavors and nuisances into my Bourbon creating a one of kind refined
+                    doubling-barreling) imparts subtle flavors and nuisances into my Bourbon creating a one of kind refined
 
-                        balanced Bourbon.  We blend in natural spring water from the Carneros wine appellations’ volcano
+                    balanced Bourbon.  We blend in natural spring water from the Carneros wine appellations’ volcano
 
-                        formation, and the final product is smooth and refined with notes of dried apricot, violets, cherries,
+                    formation, and the final product is smooth and refined with notes of dried apricot, violets, cherries,
 
-                        coffee, caramel, vanilla and winter baking spices.</p>
+                    coffee, caramel, vanilla and winter baking spices.</p>
                 </div>
             </div>
         </section>
@@ -260,9 +264,6 @@
                </div>
                <div class="three-col">
                    <h4>Hooker's House</h4>
-                   <!-- <h1>twitter</h1> -->
-                   <!--<a class="twitter-timeline" href="https://twitter.com/HookersBourbon" data-widget-id="562329410838462465">Tweets by @HookersBourbon</a>-->
-                   <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
                </div>
                <div class="three-col l-social-container">
                    <a class="twitter-timeline" href="https://twitter.com/HookersBourbon" data-widget-id="562329410838462465">Tweets by @HookersBourbon</a>
@@ -298,7 +299,7 @@
         <!-- NO MINIFY - DEV & TEST -->
         <script src="assets/js/utilities.js"></script>
         <script src="assets/js/data.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.min.js"></script>
         <!-- <script src="assets/js/main.min.js"></script>
         -->
         <!-- REMOVE main.js/UNCOMMENT main.min.js FOR PRODUCTION -->

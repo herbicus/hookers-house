@@ -11,9 +11,11 @@ var cornerstoneAPI = (function(options) {
 	var heroTitle = document.getElementById("l-hero-title");
 	var heroCopy = document.getElementById("l-hero-copy");
 	var heroCopy2 = document.getElementById("l-hero-copy2");
+  	var heroTag = document.getElementById("l-char-tagline");
 	var heroDiv = document.getElementById("aboveFold");
 	var leftContainer = document.getElementById("heroLeft");
 	var rightContainer = document.getElementById("heroRight");
+
 
 	for (var i = 0; i < sites.length; i++) {
 		var heroImage = document.createElement("img");
@@ -45,10 +47,10 @@ var cornerstoneAPI = (function(options) {
 		
 		leftContainer.appendChild(heroImage);
 
-		//heroHeader.innerHTML = sites[siteIndex].loadHeader;
 		heroTitle.innerHTML = sites[siteIndex].loadTitle;
 		heroCopy.innerHTML = sites[siteIndex].loadCopy;
 		heroCopy2.innerHTML = sites[siteIndex].loadCopy2;
+    	heroTag.innerHTML = sites[siteIndex].loadTag;
 
 		var sitesBackground = sites[siteIndex].loadBackground;
 		$("#aboveFold").css("background", sitesBackground);
@@ -58,8 +60,6 @@ var cornerstoneAPI = (function(options) {
 		
 		var shadowColor = sites[siteIndex].loadShadow;
 		$("#l-hero-header").css("text-shadow", shadowColor);
-		// var bgImage = $( heroDiv ).css( "background" );
-		// console.log(sitesBackground);
 	};
 
 	// TWEENMAX STUFF
@@ -95,21 +95,13 @@ var cornerstoneAPI = (function(options) {
 		});
 
 		TweenMax.to(".l-character-choice" , 0.75, {
-			// left: "200%",
 			autoAlpha: 1,
 			display: "block",
 			ease: Quad.easeInOut
 		});
-
-		// TweenMax.to(".l-section-hero, .l-section-two" , 0.75, {
-		// 	autoAlpha: 1,
-		// 	display: "block",
-		// 	ease: Back.easeInOut
-		// });
 	});
 
 	$('.splash-btn-no').on("click", function(){
-		//$('.l-splash-overlay').effect("bounce", {times:3, distance : -5, direction : 'right'}, 300);
 		$(this).toggleClass("open");
 
   		if ($(this).hasClass("played")) {
@@ -124,7 +116,22 @@ var cornerstoneAPI = (function(options) {
 	crossFade.to("#aboveFold", 0.3, { autoAlpha: 0, ease: Quad.easeInOut});
 	crossFade.to("#aboveFold", 0.3, { autoAlpha: 1, ease: Quad.easeInOut});
 
-	$(".header-switch-gen").on("click", function(){
+  $(".l-switch-btn-left").on("mouseover", function(){
+    // AUDIO
+    var playing = false;
+
+    if (playing == true) {
+      document.getElementById('generalAudio').pause();
+      document.getElementById('joeAudio').pause();
+      playing = false;
+
+    } else {
+      document.getElementById('generalAudio').play();
+      playing = true;
+    }
+  });
+
+	$(".l-switch-btn-left").on("click", function(){
 
 		TweenMax.to("#aboveFold" , 0.5, {
 			marginLeft: -100,
@@ -144,36 +151,27 @@ var cornerstoneAPI = (function(options) {
 				});
 			}
 		}); // end tweenmax
-
-    // AUDIO
-    var playing = false;
-
-    if (playing == true) {
-      document.getElementById('generalAudio').pause();
-      playing = false;
-
-    } else {
-      document.getElementById('generalAudio').play();
-      playing = true;
-    }
-
 	});
 
-	$(".header-switch-joe").on("click", function(){
+	$(".l-switch-btn-right").on("mouseover", function(){
+	    // AUDIO
+	    var playing = false;
 
-    // AUDIO
-    var playing = false;
+	    if (playing == true) {
+	      document.getElementById('joeAudio').pause();
+	      playing = false;
 
-    if (playing == true) {
-      document.getElementById('joeAudio').pause();
-      playing = false;
+	      return false;
 
-    } else {
-      document.getElementById('joeAudio').play();
-      playing = true;
-    }
+	    } else {
+	      document.getElementById('joeAudio').play();
+	      playing = true;
+	    }
+	});
 
-    TweenMax.to("#aboveFold" , 0.5, {
+	$(".l-switch-btn-right").on("click", function(){
+
+    	TweenMax.to("#aboveFold" , 0.5, {
 			marginLeft: -100,
 			display: "none",
 			autoAlpha: 0,
@@ -190,106 +188,58 @@ var cornerstoneAPI = (function(options) {
 					}
 				});
 			}
-		});
+		}); // end tween
 	});
 
+	// FROM SPLASH TO SITE ANIMATION TIMELINE
+	var toSiteTransition = new TimelineMax({paused: true});
+	
+	toSiteTransition.to(".l-splash-overlay", 0.75, { autoAlpha: 0, left: "-100%", display: "none", ease: Quad.easeInOut});
+	toSiteTransition.to(".l-section-hero, .l-characters-section, .l-section-2, .l-section-3, footer", 0.75, { display: "block", autoAlpha: 1, ease: Quad.easeInOut}, 0.25);
+	// toSiteTransition.to(".l-splash-overlay", 0.75, { autoAlpha: 1, ease: Quad.easeInOut}, 0.25);
+	toSiteTransition.to(".top-header-section", 0.75, { autoAlpha: 1, ease: Quad.easeInOut}, 0.25);
+	
 	// SPLASH SCREEN GENERAL BUTTON
 	$(".l-btn-general").on("click", function(){
-    TweenMax.to(".l-splash-overlay" , 0.75, {
-      css: {background: "transparent" },
-      ease: Quad.easeInOut
-    });
-
-    TweenMax.to(".l-character-choice figcation, .l-overlay-logo" , 0.75, {
-      autoAlpha: 0,
-      ease: Quad.easeInOut
-    });
-
-    TweenMax.to(".l-splash-overlay" , 0.75, {
-			//left: "200%",
-			autoAlpha: 0,
-			scale: 0,
-			left: "-32%",
-			top: "-30%",
-			display: "none",
-			ease: Quad.easeInOut
-		}); 
 
 		loadSite(0);
 
-		TweenMax.to(".l-section-hero, .l-characters-section, .l-section-2, .l-section-3, footer" , 0.75, {
-			autoAlpha: 1,
-			display: "block",
-			ease: Back.easeInOut
-		});
+		toSiteTransition.play();
 
-		TweenMax.to(".top-header-section" , 0.75, {
-			// left: "200%",
-			autoAlpha: 1,
-			ease: Quad.easeInOut
-		});
+	    // AUDIO
+	    var playing = false;
 
-    // AUDIO
-    var playing = false;
+	    if (playing == true) {
+	      document.getElementById('generalAudio').pause();
+	      document.getElementById('generalAudio').pause();
+	      playing = false;
 
-    if (playing == true) {
-      document.getElementById('generalAudio').pause();
-      playing = false;
-
-    } else {
-      document.getElementById('generalAudio').play();
-      playing = true;
-    }
+	    } else {
+	      document.getElementById('generalAudio').play();
+	      playing = true;
+	    }
 
 	});
 
 	// SPLASH SCREEN JOE BUTTON
 
 	$(".l-btn-joe").on("click", function(){
-    TweenMax.to(".l-splash-overlay" , 0.75, {
-      css: {background: "transparent" },
-      ease: Quad.easeInOut
-    });
+	    
+	    loadSite(1);
 
-    TweenMax.to(".l-character-choice figcation, .l-overlay-logo" , 0.75, {
-      autoAlpha: 0,
-      ease: Quad.easeInOut
-    });
+	    toSiteTransition.play();
 
-		TweenMax.to(".l-splash-overlay" , 0.75, {
-			autoAlpha: 0,
-			scale: 0,
-			left: "-32%",
-			top: "-30%",
-			display: "none",
-			ease: Quad.easeInOut
-		}); 
+	    // AUDIO
+	    var playing = false;
 
-		loadSite(1);
+	    if (playing == true) {
+	      document.getElementById('joeAudio').pause();
+	      playing = false;
 
-		TweenMax.to(".l-section-hero, .l-characters-section, .l-section-2, .l-section-3, footer" , 0.75, {
-			autoAlpha: 1,
-			display: "block",
-			ease: Back.easeInOut
-		});
-
-		TweenMax.to(".top-header-section" , 0.75, {
-			// left: "200%",
-			autoAlpha: 1,
-			ease: Quad.easeInOut
-		});
-
-    // AUDIO
-    var playing = false;
-
-    if (playing == true) {
-      document.getElementById('joeAudio').pause();
-      playing = false;
-
-    } else {
-      document.getElementById('joeAudio').play();
-      playing = true;
-    }
+	    } else {
+	      document.getElementById('joeAudio').play();
+	      playing = true;
+	    }
 
 	});
 
@@ -329,8 +279,10 @@ var cornerstoneAPI = (function(options) {
 	// init 
 	var init = function() {	
 		$(window).load();
+		
 		// STELLAR JS STUFF
 		$("#aboveFold").stellar();
+		
 		$.stellar({
 		  horizontalScrolling: false,
 		  verticalScrolling: true,

@@ -45,23 +45,22 @@ var myUtilitiesAPI = (function(options) {
 		return functionToCheck && getType.toString.call(functionToCheck) == '[object Function]';
 	}
 
-	
-	// // USE
-	// AceLoadImages([
-	// 	// yourArrayOfImages.jpg,
-	// 	// keepEmComming.jpg,
-	// 	// calls imagesAreLoaded() function at end
-	// ], imagesAreLoaded);
+	AceLoadImages([
+		'assets/img/overlay-bg.png',
+		'assets/img/wood-paper-bg.jpg',
+		'assets/img/hooker-pic-x.png',
+		'assets/img/fighting-pic.png',
+		'assets/img/map1.png',
+		'assets/img/frame-container.png'
+	], imagesAreLoaded);
 
-	// // USE A PRELOADING IMAGE/TWEENMAX AFTER LOADS
-	// function imagesAreLoaded() {
-	// 	// do whatever it is that cant happen before the images are ready
-	// 	TweenMax.to("#splash-overlay" , 0.75, {
-	//   		scale: 0,
-	//   		autoAlpha: 0,
-	//   		ease: Back.easeInOut
-	//   	});
-	// }
+	function imagesAreLoaded() {
+	  	TweenMax.to(".l-preload-overlay" , 0.5, {
+	  		autoAlpha: 0,
+	  		display: "none",
+	  		ease: Back.easeInOut
+	  	});
+	}
 	// END PRELOAD UTILITY
 
 	var init = function() {
