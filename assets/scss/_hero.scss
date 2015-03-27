@@ -17,7 +17,10 @@
 }
 
 .l-section-hero {
+	background: url("../img/wood-paper-bg.jpg")fixed;
 	@include bg-cover;
+	background-attachment: fixed; 
+	background-position: 50% 0; 
 	position: relative;
 	overflow: hidden;
 	height: 100vh;
@@ -32,13 +35,13 @@
 	}
 }
 
-#aboveFold {
-	@include bg-cover;
-	background-attachment: fixed !important; 
-	-webkit-background-size: cover !important; 
-	-o-background-size: cover !important; 
-	background-size: cover !important;
-}
+// #aboveFold {
+// 	@include bg-cover;
+// 	background-attachment: fixed !important; 
+// 	-webkit-background-size: cover !important; 
+// 	-o-background-size: cover !important; 
+// 	background-size: cover !important;
+// }
 
 #l-hero-image {
 	//@include shadow-border($deepRed);

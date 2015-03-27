@@ -52,8 +52,8 @@ var cornerstoneAPI = (function(options) {
 		heroCopy2.innerHTML = sites[siteIndex].loadCopy2;
     	heroTag.innerHTML = sites[siteIndex].loadTag;
 
-		var sitesBackground = sites[siteIndex].loadBackground;
-		$("#aboveFold").css("background", sitesBackground);
+		// var sitesBackground = sites[siteIndex].loadBackground;
+		// $("#aboveFold").css("background", sitesBackground);
 
 		var headerColor = sites[siteIndex].loadColor;
 		$("#l-hero-header").css("color", headerColor);
@@ -122,11 +122,13 @@ var cornerstoneAPI = (function(options) {
 
     if (playing == true) {
       document.getElementById('generalAudio').pause();
-      document.getElementById('joeAudio').pause();
+      document.getElementById('joeAudio').pause();      
       playing = false;
 
     } else {
       document.getElementById('generalAudio').play();
+      document.getElementById('joeAudio').pause();
+      document.getElementById('generalAudio').currentTime = 0;
       playing = true;
     }
   });
@@ -159,12 +161,15 @@ var cornerstoneAPI = (function(options) {
 
 	    if (playing == true) {
 	      document.getElementById('joeAudio').pause();
+	      document.getElementById('generalAudio').pause();
 	      playing = false;
 
 	      return false;
 
 	    } else {
 	      document.getElementById('joeAudio').play();
+	      document.getElementById('generalAudio').pause();
+	      document.getElementById('joeAudio').currentTime = 0;
 	      playing = true;
 	    }
 	});
@@ -210,12 +215,13 @@ var cornerstoneAPI = (function(options) {
 	    var playing = false;
 
 	    if (playing == true) {
-	      document.getElementById('generalAudio').pause();
+	      document.getElementById('joeAudio').pause();
 	      document.getElementById('generalAudio').pause();
 	      playing = false;
 
 	    } else {
 	      document.getElementById('generalAudio').play();
+	      document.getElementById('joeAudio').pause();
 	      playing = true;
 	    }
 
@@ -234,10 +240,12 @@ var cornerstoneAPI = (function(options) {
 
 	    if (playing == true) {
 	      document.getElementById('joeAudio').pause();
+	      document.getElementById('generalAudio').pause();
 	      playing = false;
 
 	    } else {
 	      document.getElementById('joeAudio').play();
+	      document.getElementById('generalAudio').pause();
 	      playing = true;
 	    }
 
@@ -274,7 +282,35 @@ var cornerstoneAPI = (function(options) {
 		}, 2000);
 	});
 
-	
+	// Parallax stuff - hero seciton
+	var heroBackgroundParallax = new TimelineMax({paused: true});
+				
+	heroBackgroundParallax.to(".l-section-hero", 2, {css:{"background-position-y": 300}});
+
+	window.addEventListener("scroll", function(){
+		var parallaxTiming = document.body.scrollTop / 5000;
+
+		$(".l-section-hero").waypoint(function() {
+
+			heroBackgroundParallax.seek(parallaxTiming);
+
+		}, { offset: "90%" });
+	});
+
+	// Parallax stuff - map section
+	var backgroundParallax = new TimelineMax({paused: true});
+				
+	backgroundParallax.to(".l-section-3", 2, {css:{"background-position-y": 200}});
+
+	window.addEventListener("scroll", function(){
+		var parallaxTiming = document.body.scrollTop / 5000;
+
+		$(".l-section-3").waypoint(function() {
+
+			backgroundParallax.seek(parallaxTiming);
+
+		}, { offset: "90%" });
+	});
 
 	// init 
 	var init = function() {	
