@@ -23,7 +23,7 @@ var cornerstoneAPI = (function(options) {
 		heroImage.src = sites[i].loadImage;
 
 		heroImage.setAttribute("data-site-index", i);
-		heroImage.setAttribute("data-stellar-ratio", 0.45);
+		// heroImage.setAttribute("data-stellar-ratio", 0.45);
 
 		$(heroImage).on("load", function(){
 			var thisSiteIndex = this.getAttribute("data-site-index");
@@ -41,7 +41,7 @@ var cornerstoneAPI = (function(options) {
 		}
 
 		var heroImage = document.createElement("img");
-		heroImage.setAttribute("data-stellar-ratio", 0.45);
+		// heroImage.setAttribute("data-stellar-ratio", 0.45);
 		heroImage.id="l-hero-image";
 		heroImage.src = sites[siteIndex].loadImage;
 		
@@ -297,7 +297,7 @@ var cornerstoneAPI = (function(options) {
 		}, { offset: "90%" });
 	});
 
-	// Parallax stuff - map section
+	// map section
 	var backgroundParallax = new TimelineMax({paused: true});
 				
 	backgroundParallax.to(".l-section-3", 2, {css:{"background-position-y": 200}});
@@ -314,16 +314,6 @@ var cornerstoneAPI = (function(options) {
 
 	// init 
 	var init = function() {	
-		$(window).load();
-		
-		// STELLAR JS STUFF
-		$("#aboveFold").stellar();
-		
-		$.stellar({
-		  horizontalScrolling: false,
-		  verticalScrolling: true,
-		  responsive: true
-		});	
 
 		loadSite();
 	};

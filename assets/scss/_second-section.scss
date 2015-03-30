@@ -22,9 +22,11 @@
 	.l-bourbon-copy {
 		background: url("../img/drawing.png");
 		@include bg-contain;
+		background-position: 50% 0; 
 		img {
 			position: relative;
 			left: 50%;
+			top: 0;
 		    @include media(max-width 480px, 6) {
 		        left: 25%;
 		    }
